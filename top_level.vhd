@@ -60,9 +60,9 @@ begin
    DP_in    <= "000000"; -- position of the decimal point in the display (1=LED on,0=LED off)
    Blank    <= "110000"; -- blank the 2 MSB 7-segment displays (1=7-seg display off, 0=7-seg display on)
              
-	in1 <= "00000000" & SW(7 downto 0);
-	in2 <= bcd(15 downto 0);
-
+	in1 <= bcd(15 downto 0);
+	in2 <= "00000000" & SW(7 downto 0);
+	
 	s <= SW(9);
  
 
