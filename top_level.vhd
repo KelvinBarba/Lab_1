@@ -39,7 +39,7 @@ Component binary_bcd IS
 		);           
 END Component;
 
-Component MUX2TO1 IS
+Component MUX2TO1 IS   ---- Component
    PORT(
  		   in1	  :	in std_logic_vector(15 downto 0);
 			in2     :	in std_logic_vector(15 downto 0);
