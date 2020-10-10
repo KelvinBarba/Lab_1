@@ -65,14 +65,20 @@ begin
 
         -- Reset generation
         -- EDIT: Check that reset_n is really your reset signal
-        reset_n <= '1';
-        wait for 100 ns;
         reset_n <= '0';
+        wait for 100 ns;
+        reset_n <= '1';
         wait for 100 ns;
 
         -- EDIT Add stimuli here
         wait for 100 * TbPeriod;
-
+        SW <= "0000001000";
+        wait for 100 * TbPeriod;
+        SW <= "0000001010";
+        wait for 100 * TbPeriod;
+        SW <= "1001000000";
+        wait for 100 * TbPeriod;
+        SW <= "1000001101";
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;
