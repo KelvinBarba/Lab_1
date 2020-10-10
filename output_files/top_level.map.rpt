@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Sat Oct 10 10:20:41 2020
+Sat Oct 10 12:10:39 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -50,7 +50,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 10 10:20:41 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 10 12:10:39 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; top_level                                   ;
 ; Top-level Entity Name              ; top_level                                   ;
@@ -338,7 +338,7 @@ Encoding Type:  One-Hot
 +------------+-------+----------+-----------------+
 ; Port       ; Type  ; Severity ; Details         ;
 +------------+-------+----------+-----------------+
-; in2[15..8] ; Input ; Info     ; Stuck at GND    ;
+; in1[15..8] ; Input ; Info     ; Stuck at GND    ;
 +------------+-------+----------+-----------------+
 
 
@@ -374,7 +374,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -384,7 +384,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sat Oct 10 10:20:20 2020
+    Info: Processing started: Sat Oct 10 12:10:25 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab_1 -c top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -404,10 +404,10 @@ Info (12021): Found 2 design units, including 1 entities, in source file binary_
     Info (12022): Found design unit 1: binary_bcd-behavior File: C:/Users/Kelvin/Documents/Lab_1/binary_bcd.vhd Line: 17
     Info (12023): Found entity 1: binary_bcd File: C:/Users/Kelvin/Documents/Lab_1/binary_bcd.vhd Line: 8
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Info (12128): Elaborating entity "MUX2TO1" for hierarchy "MUX2TO1:MUX2TO1_ins" File: C:/Users/Kelvin/Documents/Lab_1/top_level.vhd Line: 68
-Info (12128): Elaborating entity "SevenSegment" for hierarchy "SevenSegment:SevenSegment_ins" File: C:/Users/Kelvin/Documents/Lab_1/top_level.vhd Line: 75
+Info (12128): Elaborating entity "MUX2TO1" for hierarchy "MUX2TO1:MUX2TO1_ins" File: C:/Users/Kelvin/Documents/Lab_1/top_level.vhd Line: 69
+Info (12128): Elaborating entity "SevenSegment" for hierarchy "SevenSegment:SevenSegment_ins" File: C:/Users/Kelvin/Documents/Lab_1/top_level.vhd Line: 76
 Info (12128): Elaborating entity "SevenSegment_decoder" for hierarchy "SevenSegment:SevenSegment_ins|SevenSegment_decoder:decoder0" File: C:/Users/Kelvin/Documents/Lab_1/SevenSegment.vhd Line: 24
-Info (12128): Elaborating entity "binary_bcd" for hierarchy "binary_bcd:binary_bcd_ins" File: C:/Users/Kelvin/Documents/Lab_1/top_level.vhd Line: 97
+Info (12128): Elaborating entity "binary_bcd" for hierarchy "binary_bcd:binary_bcd_ins" File: C:/Users/Kelvin/Documents/Lab_1/top_level.vhd Line: 98
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX0[7]" is stuck at VCC File: C:/Users/Kelvin/Documents/Lab_1/top_level.vhd Line: 10
     Warning (13410): Pin "HEX1[7]" is stuck at VCC File: C:/Users/Kelvin/Documents/Lab_1/top_level.vhd Line: 10
@@ -438,9 +438,9 @@ Info (21057): Implemented 293 device resources after synthesis - the final resou
     Info (21059): Implemented 58 output pins
     Info (21061): Implemented 223 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4802 megabytes
-    Info: Processing ended: Sat Oct 10 10:20:41 2020
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 4794 megabytes
+    Info: Processing ended: Sat Oct 10 12:10:40 2020
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:31
 
 
