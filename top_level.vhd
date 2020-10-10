@@ -44,7 +44,7 @@ Component MUX2TO1 IS
  		   in1	  :	in std_logic_vector(15 downto 0);
 			in2     :	in std_logic_vector(15 downto 0);
 			s		  :	in std_logic;
-			mux_out :	out std_logic_vector(15 downto 0);
+			mux_out :	out std_logic_vector(15 downto 0)
   		 );
 END Component;
 
