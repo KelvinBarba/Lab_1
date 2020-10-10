@@ -45,9 +45,7 @@ begin
    DP_in    <= "000000"; -- position of the decimal point in the display (1=LED on,0=LED off)
    Blank    <= "110000"; -- blank the 2 MSB 7-segment displays (1=7-seg display off, 0=7-seg display on)
              
- 
---mux location
- 
+                
 SevenSegment_ins: SevenSegment  
 
                   PORT MAP( Num_Hex0 => Num_Hex0,
