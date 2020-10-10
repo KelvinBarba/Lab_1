@@ -18,6 +18,9 @@ Signal Num_Hex0, Num_Hex1, Num_Hex2, Num_Hex3, Num_Hex4, Num_Hex5 : STD_LOGIC_VE
 Signal DP_in, Blank:  STD_LOGIC_VECTOR (5 downto 0);
 Signal switch_inputs: STD_LOGIC_VECTOR (12 downto 0);
 Signal bcd:           STD_LOGIC_VECTOR(15 DOWNTO 0);
+--Signal in1, in2:    STD_LOGIC_VECTOR(15 DOWNTO 0);-----This???
+--Signal s:           STD_LOGIC;
+--Signal mux_out:		 STD_LOGIC_VECTOR(15 DOWNTO 0);
 
 Component SevenSegment is
     Port( Num_Hex0,Num_Hex1,Num_Hex2,Num_Hex3,Num_Hex4,Num_Hex5 : in  STD_LOGIC_VECTOR (3 downto 0);
@@ -35,19 +38,42 @@ Component binary_bcd IS
 		);           
 END Component;
 
+-- Component MUX2TO1 IS
+--   PORT(
+-- 		in1	  :	in std_logic_vector(15 downto 0);
+--			in2     :	in std_logic_vector(15 downto 0);
+--			s		  :	in std_logic;
+--			mux_out :	out std_logic_vector(15 downto 0);
+--			);
+-- END Component;
+
+
 begin
    Num_Hex0 <= bcd(3  downto  0); 
+--	Num_Hex0 <= mux_out(3 downto 0);
    Num_Hex1 <= bcd(7  downto  4);
+-- Num_Hex1 <= mux_out(7 downto 4);
    Num_Hex2 <= bcd(11 downto  8);
+-- Num_Hex2 <= mux_out(11 downto 8);
    Num_Hex3 <= bcd(15 downto 12);
+-- Num_Hex3 <= mux_out(15 downto 12);
    Num_Hex4 <= "0000";
    Num_Hex5 <= "0000";   
    DP_in    <= "000000"; -- position of the decimal point in the display (1=LED on,0=LED off)
    Blank    <= "110000"; -- blank the 2 MSB 7-segment displays (1=7-seg display off, 0=7-seg display on)
              
- 
---mux location
- 
+ -- in1 <= bcd(15 downto 0);
+ -- in2 <= "00000000" & SW(7 downto 0);
+ -- s <= SW(9);
+ --
+
+-- MUX2TO1_ins: MUX2TO1
+--		PORT MAP(  in1 	 => in1,
+--					  in2		 => in2,
+--					  s   	 => s,
+--					  mux_out => mux_out
+--				  );
+
 SevenSegment_ins: SevenSegment  
 
                   PORT MAP( Num_Hex0 => Num_Hex0,
